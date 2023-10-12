@@ -87,9 +87,7 @@ class ViewController: UIViewController {
        
         loadProg.progress = Float(countdown)/30
         if countdown <= 0 {
-            timer.invalidate()
-            answerField.isEnabled = false
-            SubmitButton.isEnabled = false
+           finishGame()
         }
     }
     @IBAction func SubmitPressed(_ sender: Any) {
@@ -128,6 +126,34 @@ class ViewController: UIViewController {
 
     @IBAction func chosenIndex(_ sender: UISegmentedControl) {
         restart()
+    }
+    
+    func finishGame(){
+        timer.invalidate()
+        answerField.isEnabled = false
+        SubmitButton.isEnabled = false
+    }
+    
+    func askName(){
+        let alertController = UIAlertController(title: "Game is Over!", message: "Save your score: \(score)", preferredStyle: .alert)
+        alertController.addTextField() { temp in
+            temp.placeholder = "Enter your name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            guard let textField = alertController.textFields?.first else{
+                return
+            }
+            guard let text = textField.text , !text.isEmpty else{
+                return
+            }
+            
+        }
+        alertController.addAction(saveAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
     }
     
 }

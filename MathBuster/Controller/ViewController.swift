@@ -132,6 +132,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         answerField.isEnabled = false
         SubmitButton.isEnabled = false
+        askName()
     }
     
     func askName(){

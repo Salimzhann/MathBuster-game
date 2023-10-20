@@ -16,6 +16,7 @@
 		190C74352AD415E100CBF51C /* MathBusterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C74342AD415E100CBF51C /* MathBusterTests.swift */; };
 		190C743F2AD415E100CBF51C /* MathBusterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C743E2AD415E100CBF51C /* MathBusterUITests.swift */; };
 		190C74412AD415E100CBF51C /* MathBusterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C74402AD415E100CBF51C /* MathBusterUITestsLaunchTests.swift */; };
+		19FA03C02AE17348000884C0 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FA03BF2AE17348000884C0 /* WelcomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		190C743A2AD415E100CBF51C /* MathBusterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathBusterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		190C743E2AD415E100CBF51C /* MathBusterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathBusterUITests.swift; sourceTree = "<group>"; };
 		190C74402AD415E100CBF51C /* MathBusterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathBusterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		19FA03BF2AE17348000884C0 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				190C74212AD415DF00CBF51C /* ViewController.swift */,
+				19FA03BF2AE17348000884C0 /* WelcomePageViewController.swift */,
 				190C74232AD415DF00CBF51C /* Main.storyboard */,
 			);
 			path = Controller;
@@ -276,6 +279,7 @@
 			files = (
 				190C74222AD415DF00CBF51C /* ViewController.swift in Sources */,
 				190C741E2AD415DF00CBF51C /* AppDelegate.swift in Sources */,
+				19FA03C02AE17348000884C0 /* WelcomePageViewController.swift in Sources */,
 				190C74202AD415DF00CBF51C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

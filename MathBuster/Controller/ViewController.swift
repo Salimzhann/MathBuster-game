@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var SubmitButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var taskLabel: UILabel!
+    let userScoreKey: String = "userScore"
     var timer: Timer!
     var countdown = 30
     var result: Double?
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func generateProblem(){
-        var index: Int = selectControl.selectedSegmentIndex
+        let index: Int = selectControl.selectedSegmentIndex
         let range = ranges[index]
         var st = range.lowerBound
         var end = range.upperBound
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
             return
         }
         if result == self.result {
-            var range = selectControl.selectedSegmentIndex
+            let range = selectControl.selectedSegmentIndex
             score += coins[range]
             scoreLabel.text = "Your score:  \(score)"
         }else {
@@ -147,6 +148,7 @@ class ViewController: UIViewController {
             guard let text = textField.text , !text.isEmpty else{
                 return
             }
+            self.saveScore(name: text)
             
         }
         alertController.addAction(saveAction)
@@ -157,5 +159,17 @@ class ViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    func saveScore(name: String){
+        let userScore:[String:Any] = ["name": name, "score": score]
+        let userScoreArr: [[String: Any]] = getUserScoreArray() + [userScore]
+        let userdef = UserDefaults.standard
+        userdef.set(userScoreArr, forKey: ViewController().userScoreKey)
+    }
+    func getUserScoreArray () -> [[String:Any]] {
+        let userdef = UserDefaults.standard
+        let array = userdef.array(forKey: ViewController().userScoreKey) as? [[String:Any]]
+        return array ?? []
+    }
 }
+
 

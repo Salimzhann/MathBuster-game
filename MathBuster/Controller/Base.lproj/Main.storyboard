@@ -12,12 +12,25 @@
         <!--Welcome-->
         <scene sceneID="F9E-kC-Luk">
             <objects>
-                <viewController id="Fav-zB-ur6" sceneMemberID="viewController">
+                <viewController id="Fav-zB-ur6" customClass="WelcomePageViewController" customModule="MathBuster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHJ-yN-zZP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQL-jK-yAm">
+                                <rect key="frame" x="20" y="122.99999999999999" width="353" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="B1B-aa-EI3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zQL-jK-yAm" firstAttribute="leading" secondItem="B1B-aa-EI3" secondAttribute="leading" constant="20" id="4Gq-7b-o3y"/>
+                            <constraint firstItem="zQL-jK-yAm" firstAttribute="top" secondItem="B1B-aa-EI3" secondAttribute="top" constant="20" id="iQE-q5-6N1"/>
+                            <constraint firstItem="B1B-aa-EI3" firstAttribute="trailing" secondItem="zQL-jK-yAm" secondAttribute="trailing" constant="20" id="v1L-s9-fVO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="dWs-gP-0C3">
                         <barButtonItem key="rightBarButtonItem" title="Welcome" style="plain" id="gmA-HJ-nxD">
@@ -32,6 +45,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="UserLabels" destination="zQL-jK-yAm" id="Wo2-Ae-KDc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYm-Qs-9zK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
